@@ -1,0 +1,323 @@
+canvas{
+    background-color: black;
+    display: block !important;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Canvas-div{
+    position: relative;
+    height: 480px;
+    width: 720px;
+}
+
+.startImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.startImage img{
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+}
+
+.setting{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.setting img{
+    margin-left: 20px;
+    height: 32px;
+    width: 32px;
+    z-index: 2;
+}
+
+.setting img:hover{
+    cursor: pointer;
+    scale: 1.1 !important;
+}
+
+.d-none{
+    display: none !important;
+}
+
+.StartButton{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 480px;
+    width: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 999;
+}
+
+.StartButton button{
+    width: 150px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: 2px solid rgb(255, 214, 10);
+    color: rgb(255, 214, 10);
+    font-size: 28px;
+}
+
+.StartButton button:hover{
+    cursor: pointer;
+    scale: 1.1;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.steering-div{
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 480px;
+    width: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.steering{
+    position: relative;
+    border: 2px solid rgb(255, 145, 10);
+    height: 480px;
+    width: 720px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h2{
+    margin-top: 15px;
+}
+
+.overdiv-conrol div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.overdiv-conrol div img{
+    height: 42px;
+    width: 40px;
+    margin-left: 28px;
+}
+
+.overdiv-conrol span{
+    font-size: 22px;
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.Won-Game{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 480px;
+    width: 720px;
+    z-index: 100;
+}
+
+.Won-Game img{
+    object-fit: cover;
+    height: 480px;
+    width: 720px;
+}
+
+.fullscreenStartScreen{
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.fullscreenStartScreen img{
+    height: 100vh !important;
+    width: 100% !important;
+}
+
+.joystick{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    justify-content: space-between;
+    display: none;
+}
+
+.settingsFullscreen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh !important;
+    width: 100vw !important;
+}
+
+.joystick img{
+    height: 52px;
+    width: 52px;
+}
+
+.move img{
+    padding: 3px;
+}
+
+.turnPhone{
+    height: 100vh;
+    width: 100%;
+    z-index: 99999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.turnPhone img{
+    height: 64px;
+    width: 64px;
+}
+
+.turnPhone h1{
+    margin-top: 20px;
+    color: white;
+}
+
+.ingameSettings{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    display: flex;
+}
+
+.ingameSettings div{
+    margin-right: 10px;
+}
+
+.ingameSettings img{
+    height: 25px;
+    width: 25px;
+}
+
+@media only screen and (max-width: 720px){
+    canvas {
+        width: 100vw !important; 
+    }
+    .Canvas-div {
+        width: 100% !important; 
+    }
+    .startImage img{
+        width: 100% !important;
+    }
+
+    .StartButton{
+        width: 100% !important;
+    }
+
+    .startImage img{
+        object-fit: fill;
+        width: 100% !important;
+    }
+    
+    .Won-Game img{
+        width: 100vw !important;
+    }
+
+    .steering-div {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .steering{
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width:650px){
+    .turnPhone{
+        display: flex;
+    }
+}
+
+@media only screen and (max-height: 480px){
+
+    .joystick{
+        display: flex !important;
+    }
+    canvas {
+        height: 100vh !important;
+        width: 100% !important;
+    }
+
+    .Canvas-div {
+        height: 100vh !important;
+        width: 100% !important;
+    }
+
+    .Won-Game img{  
+        height: 100% !important;
+        width: 100vw !important;
+    }
+
+    .startImage img{
+        height: 100vh !important;
+        width: 100% !important;
+    }
+
+    .StartButton{
+        height: 100vh !important;
+        width: 100% !important;
+    }
+    .startImage img{
+        height: 100vh !important;
+        width: 100% !important;
+    }
+
+    .startImage{
+        height: 100vh !important;
+        width: 100% !important;
+    }
+}

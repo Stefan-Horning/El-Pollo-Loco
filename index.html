@@ -1,11 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/sombrero-64.png" type="image/x-icon">
     <title>El Pollo Loco</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/game.js"></script>
 </head>
 <body>
+    <div id="fullscreen" class="Canvas-div">
+        <canvas class="canvas" id="canvas" width="720" height="480"></canvas>
+        
+        <div id="firstscreen">
+            <div  class="startImage">
+                <img id="startscreen" src="img/9_intro_outro_screens/start/startscreen_1.png" alt="">
+            </div>
+            <div class="setting">
+                <img src="img/joystick.png" alt="">
+                <img id="music" onclick="" src="img/play-64.png" alt="">
+                <img onclick="OpenControl()" src="img/joystick-64.png" alt="">
+                <img onclick="fullscreen();" src="img/fullscreen-12-64.png" alt="">
+            </div>
+            <div id="startButton" class="StartButton">
+                <button onclick="">Start</button>
+            </div>
+        </div>
+
+
+        <div class="joystick" id="joystick">
+            <div class="move">
+                <img id="left" src="img/LEFT.png" alt="">
+                <img id="right" src="img/R.png" alt="">
+            </div>
+
+            <div class="buy">
+                <img id="buy" src="img/buy-64.png" alt="">
+                <img id="trow" src="img/bottle.png" alt="">
+                <img id="jump" src="img/JUMP.png" alt="">
+            </div>
+
+        </div>
+
+        <div id="won" class="Won-Game d-none">
+            <img src="img/9_intro_outro_screens/game_over/game over.png" alt="">
+        </div>
+
+        <div id="lost" class="Won-Game d-none">
+            <img src="img/9_intro_outro_screens/game_over/oh no you lost!.png" alt="">
+        </div>
+
+        <div id="steering" class="steering-div d-none">
+            <div class="steering">
+                <h2>Game control</h2>
+                <div class="overdiv-conrol">
+                    <div>
+                        <span>LEFT :</span>
+                        <img src="img/icons/LEFT.png" alt="">
+                    </div>
+                    <div>
+                        <span>RIGHT :</span>
+                        <img src="img/icons/RIGHT.png" alt="">
+                    </div>
+                    <div>
+                        <span>JUMP :</span>
+                        <img src="img/icons/SPACE.png" alt="">
+                    </div>
+                    <div>
+                        <span>TROW :</span>
+                        <img src="img/icons/D.png" alt="">
+                    </div>
+                    <div>
+                        <span>BUY :</span>
+                        <img src="img/letter-b-64.png" alt="">
+                    </div>
+                    <div>
+                        <span>Turn music on</span> 
+                        <img src="img/play-64.png" alt="">
+                        
+                    </div>
+                        <p>Music starts in the game</p>
+                    <img class="close" onclick="CloseControl()" src="img/icons/cancel.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="ingameSettings" class="ingameSettings d-none">
+            <div>
+                <img src="img/icons/LEFT.png" alt="">
+            </div>
+            <div>
+                <img src="img/icons/RIGHT.png" alt="">
+            </div>
+            <div>
+                <img src="img/icons/SPACE.png" alt="">
+            </div>
+            <div>
+                <img src="img/icons/D.png" alt="">
+            </div>
+            <div>
+                <img src="img/letter-b-64.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="turnPhone">
+        <img src="img/turnNew.png" alt="">
+        <h1>Turn Phone</h1>
+    </div>
     
 </body>
 </html>
