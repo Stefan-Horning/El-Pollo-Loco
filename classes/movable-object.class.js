@@ -95,6 +95,20 @@ class MovableObject extends DrawableObject{
     }
 
     /**
+     * Go right
+     */
+    moveRight() {
+        this.x += this.speed;
+    }
+
+    /**
+     * go left
+     */
+    moveLeft(){
+        this.x -= this.speed;      
+    }
+
+    /**
      * Animations
      * @param {All Images} image 
      */
@@ -111,6 +125,15 @@ class MovableObject extends DrawableObject{
     }
 
     /**
+     * Jump
+     */
+    jump(){
+        if(!this.unableJump){
+            this.speedY = 30;
+        }
+    }
+
+    /**
      * 
      * @param {Object} obj 
      * @returns coordinates
@@ -122,4 +145,50 @@ class MovableObject extends DrawableObject{
             this.y +this.offset.top < obj.y + obj.height - obj.offset.bottom;
     }
 
+    /**
+     * Object isColliding
+     */
+    hit(){
+        let Time =  new Date().getTime() + 2000
+        if( Time > this.lastHit){
+            this.energy -= 5;
+            if(this.energy < 0){
+                this.energy = 0;
+            }else{
+                this.lastHit = new Date().getTime();
+            }
+        }
+    }
+
+    /**
+     * take a coin (character)
+     */
+    collectCoin(){
+        this.setCoins += 1;
+    }
+
+    /**
+     * take a bottle (character)
+     */
+    collectBottle(){
+        this.setBottle += 1;
+    }
+
+    /**
+     * 
+     * @returns is Endboss dead
+     */
+    isdead(){
+        return (this.energy === 0);
+    }
+
+    /**
+     * 
+     * @returns is Character/ Endboss hurt
+     */
+    ishurt(){
+        let timespan = new Date().getTime() - this.lastHit;
+        timespan = timespan / 500;
+        return timespan < 1;
+    }
 }

@@ -11,6 +11,38 @@ let level1;
  * set Objects to level1
  */
 function levelInit(){
+    level1 = new Level(
+        [
+            new Bottle(),
+            new Bottle(),
+            new Bottle(),
+            new Bottle(),
+            new Bottle(),
+        ],
+        [
+            new Coin(),
+            new Coin(),
+            new Coin(),
+            new Coin(),
+            new Coin(),
+            new Coin(),
+        ],
+        [
+            new SmallChicken(),
+            new SmallChicken(),
+            new Chicken(),
+            new Chicken(),
+            new Chicken(),
+            new Chicken(),
+            new EndBoss(),
+        ],
+        [
+            new Cloud(),
+            new Cloud(),
+            new Cloud(),
+        ],
+        renderBackground()
+    );
 
 }
 
