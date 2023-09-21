@@ -151,7 +151,7 @@ class MovableObject extends DrawableObject{
     hit(){
         let Time =  new Date().getTime() + 2000
         if( Time > this.lastHit){
-            this.energy -= 5;
+            this.energy -= 25;
             if(this.energy < 0){
                 this.energy = 0;
             }else{

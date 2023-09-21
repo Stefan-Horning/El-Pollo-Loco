@@ -7,7 +7,7 @@ class EndBoss extends MovableObject{
     BottleStatushit = 0;
     hit = false;
     fight = true;
-    speed = 20;
+    speed = 30;
     otherDiretion = false;
     isEnd = false;
 
